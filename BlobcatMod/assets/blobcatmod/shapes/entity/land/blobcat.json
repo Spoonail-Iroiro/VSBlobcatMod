@@ -28,24 +28,24 @@
 			"children": [
 				{
 					"name": "Face",
-					"from": [ -1.0, 1.0, 1.0 ],
-					"to": [ 4.0, 12.0, 14.0 ],
-					"rotationOrigin": [ -1.0, 1.0, 1.0 ],
+					"from": [ -2.0, 1.0, 1.0 ],
+					"to": [ 3.0, 12.0, 14.0 ],
+					"rotationOrigin": [ -2.0, 1.0, 1.0 ],
 					"faces": {
 						"north": { "texture": "#blobcattexture", "uv": [ 0.0, 41.0, 5.0, 52.0 ], "windMode": [-1,-1,-1,-1] },
 						"east": { "texture": "#blobcattexture", "uv": [ 5.0, 41.0, 18.0, 52.0 ], "windMode": [-1,-1,-1,-1] },
 						"south": { "texture": "#blobcattexture", "uv": [ 18.0, 41.0, 23.0, 52.0 ], "windMode": [-1,-1,-1,-1] },
-						"west": { "texture": "#blobcattexture", "uv": [ 23.0, 41.0, 36.0, 52.0 ], "windMode": [-1,-1,-1,-1] },
+						"west": { "texture": "#blobcattexture", "uv": [ 23.5, 41.5, 35.5, 51.5 ], "autoUv": false, "windMode": [-1,-1,-1,-1] },
 						"up": { "texture": "#blobcattexture", "uv": [ 0.0, 28.0, 5.0, 41.0 ], "windMode": [-1,-1,-1,-1] },
 						"down": { "texture": "#blobcattexture", "uv": [ 5.0, 28.0, 10.0, 41.0 ], "windMode": [-1,-1,-1,-1] }
 					}
 				},
 				{
 					"name": "EarL",
-					"from": [ 0.8, 10.0, 2.7 ],
-					"to": [ 1.3, 13.5, 6.3 ],
-					"rotationOrigin": [ 0.8, 10.0, 2.7 ],
-					"rotationX": -45.0,
+					"from": [ 0.8, 10.0, 2.8 ],
+					"to": [ 1.3, 13.5, 6.4 ],
+					"rotationOrigin": [ 0.8, 10.0, 2.8 ],
+					"rotationX": -55.0,
 					"faces": {
 						"north": { "texture": "#blobcattexture", "uv": [ 0.0, 3.5, 0.5, 7.0 ] },
 						"east": { "texture": "#blobcattexture", "uv": [ 0.5, 3.5, 4.0, 7.0 ], "windMode": [-1,-1,-1,-1] },
@@ -60,7 +60,7 @@
 					"from": [ 0.8, 10.0, 12.1 ],
 					"to": [ 1.3, 13.5, 15.6 ],
 					"rotationOrigin": [ 0.8, 10.0, 12.1 ],
-					"rotationX": -45.0,
+					"rotationX": -35.0,
 					"faces": {
 						"north": { "texture": "#blobcattexture", "uv": [ 0.0, 3.5, 0.5, 7.0 ] },
 						"east": { "texture": "#blobcattexture", "uv": [ 0.5, 3.5, 4.0, 7.0 ], "windMode": [-1,-1,-1,-1] },
