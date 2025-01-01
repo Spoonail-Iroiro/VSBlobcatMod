@@ -187,10 +187,10 @@
 					"to": [ 8.0, 12.0, 14.0 ],
 					"rotationOrigin": [ -0.5, 0.0, -1.0 ],
 					"faces": {
-						"north": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 8.5, 12.0 ] },
-						"east": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 15.0, 12.0 ] },
-						"south": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 8.5, 12.0 ] },
-						"west": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 15.0, 12.0 ] },
+						"north": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 8.5, 11.0 ] },
+						"east": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 15.0, 11.0 ] },
+						"south": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 8.5, 11.0 ] },
+						"west": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 15.0, 11.0 ] },
 						"up": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 8.5, 15.0 ] },
 						"down": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 8.5, 15.0 ] }
 					}
@@ -286,15 +286,29 @@
 				{
 					"name": "Cube6",
 					"from": [ -1.5, 3.0, -1.0 ],
-					"to": [ -0.49, 10.0, 14.0 ],
+					"to": [ -0.49, 9.0, 14.0 ],
 					"rotationOrigin": [ -1.6, 3.0, -1.0 ],
 					"faces": {
-						"north": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 1.0, 7.0 ] },
-						"east": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 15.0, 7.0 ] },
-						"south": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 1.0, 7.0 ] },
-						"west": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 15.0, 7.0 ] },
+						"north": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 1.0, 6.0 ] },
+						"east": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 15.0, 6.0 ] },
+						"south": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 1.0, 6.0 ] },
+						"west": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 15.0, 6.0 ] },
 						"up": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 1.0, 15.0 ] },
 						"down": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 1.0, 15.0 ] }
+					}
+				},
+				{
+					"name": "Layer1-2",
+					"from": [ -0.5, 0.0, 0.0 ],
+					"to": [ 8.0, 12.0, 13.0 ],
+					"rotationOrigin": [ -0.5, 0.0, 0.0 ],
+					"faces": {
+						"north": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 8.5, 12.0 ] },
+						"east": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 13.0, 12.0 ] },
+						"south": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 8.5, 12.0 ] },
+						"west": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 13.0, 12.0 ] },
+						"up": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 8.5, 13.0 ] },
+						"down": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 8.5, 13.0 ] }
 					}
 				}
 			]
