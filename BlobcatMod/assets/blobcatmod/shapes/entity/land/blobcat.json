@@ -197,30 +197,30 @@
 				},
 				{
 					"name": "Layer2",
-					"from": [ -1.0, 0.0, -2.0 ],
+					"from": [ -1.0, 1.0, -2.0 ],
 					"to": [ 9.0, 10.0, 15.0 ],
-					"rotationOrigin": [ -1.0, 0.0, -2.0 ],
+					"rotationOrigin": [ -1.0, 1.0, -2.0 ],
 					"faces": {
-						"north": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 10.0, 10.0 ] },
-						"east": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 17.0, 10.0 ] },
-						"south": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 10.0, 10.0 ] },
-						"west": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 17.0, 10.0 ] },
+						"north": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 10.0, 9.0 ] },
+						"east": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 17.0, 9.0 ] },
+						"south": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 10.0, 9.0 ] },
+						"west": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 17.0, 9.0 ] },
 						"up": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 10.0, 17.0 ] },
 						"down": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 10.0, 17.0 ] }
 					}
 				},
 				{
 					"name": "Cube3",
-					"from": [ -1.0, 12.0, 1.0 ],
-					"to": [ 0.0, 13.0, 12.0 ],
-					"rotationOrigin": [ -1.0, 12.0, 1.0 ],
+					"from": [ -0.5, 12.0, 0.0 ],
+					"to": [ 0.5, 13.0, 13.0 ],
+					"rotationOrigin": [ -0.5, 12.0, 0.0 ],
 					"faces": {
 						"north": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-						"east": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 11.0, 1.0 ] },
+						"east": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 13.0, 1.0 ] },
 						"south": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-						"west": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 11.0, 1.0 ] },
-						"up": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 1.0, 11.0 ] },
-						"down": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 1.0, 11.0 ] }
+						"west": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 13.0, 1.0 ] },
+						"up": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 1.0, 13.0 ] },
+						"down": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 1.0, 13.0 ] }
 					}
 				}
 			]
