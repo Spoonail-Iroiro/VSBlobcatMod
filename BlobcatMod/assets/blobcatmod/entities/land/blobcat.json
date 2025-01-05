@@ -13,19 +13,14 @@
   "attributes": {
     "creatureDiet": {
       "foodCategories": [
-        "Grain",
-        "Vegetable"
       ],
       "foodTags": [
-        "nibbleCrop",
-        "grass",
-        "fruitmash"
       ],
       "skipFoodTags": [
-        "rice",
-        "parsnip"
       ]
-    }
+    },
+    "basketCatchable": true,
+    "basketCatchGeneration": 0
   },
   "weight": 150,
   "fallDamageMultiplier": 0.5,
@@ -40,11 +35,8 @@
     },
     "behaviors": [
       {
-        "code": "repulseagents"
-      },
-      {
         "code": "controlledphysics",
-        "stepHeight": 2.1251
+        "stepHeight": 1.0
       },
       {
         "code": "floatupwhenstuck",
@@ -53,30 +45,8 @@
       {
         "code": "interpolateposition"
       },
-      {
-        "code": "harvestable"
-      },
-      {
-        "code": "despawn",
-        "minPlayerDistance": 8,
-        "belowLightLevel": 8,
-        "minSeconds": 300
-      },
-      {
-        "code": "ropetieable",
-        "minGeneration": 2
-      }
     ],
     "animations": [
-      {
-        "code": "idle",
-        "animation": "walk",
-        "blendMode": "AddAverage",
-        "easeOutSpeed": 4,
-        "triggeredBy": {
-          "defaultAnim": true
-        }
-      }
     ]
   },
   "server": {
@@ -88,42 +58,12 @@
     },
     "behaviors": [
       {
-        "code": "repulseagents"
-      },
-      {
         "code": "controlledphysics",
-        "stepHeight": 2.1251
-      },
-      {
-        "code": "despawn",
-        "minPlayerDistance": 8,
-        "belowLightLevel": 8,
-        "minSeconds": 300
-      },
-      {
-        "code": "health",
-        "currenthealth": 19,
-        "maxhealth": 19
+        "stepHeight": 1.0
       },
       {
         "code": "floatupwhenstuck",
         "onlyWhenDead": true
-      },
-      {
-        "code": "harvestable",
-        "drops": [
-          {
-            "type": "item",
-            "code": "redmeat-raw",
-            "quantity": {
-              "avg": 13,
-              "var": 3
-            }
-          }
-        ]
-      },
-      {
-        "code": "breathe"
       },
       {
         "code": "emotionstates",
@@ -167,31 +107,20 @@
         "aiCreatureType": "LandCreature",
         "aitasks": [
           {
-            "code": "getoutofwater",
-            "priority": 1.4,
-            "movespeed": 0.02,
-            "animation": "walk",
-            "animationSpeed": 4
-          },
-          {
             "code": "idle",
             "priority": 1.3,
             "priorityForCancel": 1.35,
-            "minduration": 2667,
-            "maxduration": 2667,
+            "minduration": 5667,
+            "maxduration": 8667,
             "mincooldown": 6000,
             "maxcooldown": 20000,
-            "animation": "walk",
-            "animationSpeed": 1.0
           },
           {
-            "code": "wander",
-            "priority": 1,
-            "movespeed": 0.006,
-            "animationSpeed": 1.0,
-            "animation": "walk",
-            "preferredLightLevel": 24,
-            "priorityForCancel": 1.37
+            code: "petlookatentity",
+            priority: 1.5,
+            maxTurnAngleDeg: 360.0,
+            seekingRange: 3.0,
+            entityCodes: [ "player" ]
           },
           {
             "code": "lookaround",
@@ -200,12 +129,8 @@
         ]
       },
       {
-        "code": "ropetieable",
-        "minGeneration": 2
-      },
-      {
         "code": "pettable",
-        "minGeneration": 1
+        "minGeneration": 0
       }
     ]
   },
