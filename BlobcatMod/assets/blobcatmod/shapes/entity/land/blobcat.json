@@ -1,6 +1,6 @@
 {
 	"editor": {
-		"collapsedPaths": ",Root/Cube2/Rear/TailRoot",
+		"collapsedPaths": ",Root/Cube2/Rear/TailRoot,Root/Cube2/EarR,Root/Cube2/Rear,Root/Cube2/EarL",
 		"allAngles": false,
 		"entityTextureMode": false
 	},
@@ -332,6 +332,40 @@
 					"frame": 15,
 					"elements": {
 						"Rear": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 10.0 }
+					}
+				}
+			]
+		},
+
+		{
+			"name": "Die",
+			"code": "die",
+			"quantityframes": 120,
+			"onActivityStopped": "Stop",
+			"onAnimationEnd": "Hold",
+			"keyframes": [
+				{
+					"frame": 0,
+					"elements": {
+						"Cube2": { "offsetX": 0.0, "offsetY": 0.0, "offsetZ": 0.0, "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 }
+					}
+				},
+				{
+					"frame": 45,
+					"elements": {
+						"Cube2": { "offsetX": 0.0, "offsetY": 0.0, "offsetZ": 0.0, "rotationX": -5.0, "rotationY": 0.0, "rotationZ": 0.0 }
+					}
+				},
+				{
+					"frame": 70,
+					"elements": {
+						"Cube2": { "offsetX": 0.0, "offsetY": 0.0, "offsetZ": -14.0, "rotationX": 90.0, "rotationY": 0.0, "rotationZ": 0.0 }
+					}
+				},
+				{
+					"frame": 119,
+					"elements": {
+						"Cube2": { "offsetX": 0.0, "offsetY": 0.0, "offsetZ": -14.0, "rotationX": 90.0, "rotationY": 0.0, "rotationZ": 0.0 }
 					}
 				}
 			]

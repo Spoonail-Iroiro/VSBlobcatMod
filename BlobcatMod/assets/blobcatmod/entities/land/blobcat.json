@@ -45,8 +45,17 @@
       {
         "code": "interpolateposition"
       },
+      { code: "harvestable" },
     ],
     "animations": [
+      {
+        code: "die",
+        animation: "die",
+        animationSpeed: 1.25,
+        weight: 10,
+        blendMode: "Average",
+        triggeredBy: { onControls: [ "dead" ] }
+      }
     ]
   },
   "server": {
@@ -64,6 +73,36 @@
       {
         "code": "floatupwhenstuck",
         "onlyWhenDead": true
+      },
+      {
+        code: "health",
+        currenthealth: 5,
+        maxhealth: 5
+      },
+      {
+        code: "harvestable",
+        drops: [
+          {
+            type: "item",
+            code: "redmeat-raw",
+            quantity: {
+              avg: 1.5,
+              var: 0.5
+            }
+          },
+          {
+            type: "item",
+            code: "hide-raw-small",
+            quantity: {
+              avg: 1,
+              var: 0.5
+            }
+          }
+        ]
+      },
+      {
+        code: "deaddecay",
+        hoursToDecay: 3
       },
       {
         "code": "emotionstates",
