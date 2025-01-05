@@ -2,22 +2,19 @@
   "code": "blobcat",
   "class": "EntityAgent",
   "hitboxSize": {
-    "x": 1.0,
+    "x": 1,
     "y": 0.75
   },
   "deadHitboxSize": {
     "x": 0.75,
-    "y": 1.0
+    "y": 1
   },
   "eyeHeight": 0.6,
   "attributes": {
     "creatureDiet": {
-      "foodCategories": [
-      ],
-      "foodTags": [
-      ],
-      "skipFoodTags": [
-      ]
+      "foodCategories": [],
+      "foodTags": [],
+      "skipFoodTags": []
     },
     "basketCatchable": true,
     "basketCatchGeneration": 0
@@ -36,7 +33,7 @@
     "behaviors": [
       {
         "code": "controlledphysics",
-        "stepHeight": 1.0
+        "stepHeight": 1
       },
       {
         "code": "floatupwhenstuck",
@@ -44,17 +41,20 @@
       },
       {
         "code": "interpolateposition"
-      },
-      { code: "harvestable" },
+      }
     ],
     "animations": [
       {
-        code: "die",
-        animation: "die",
-        animationSpeed: 1.25,
-        weight: 10,
-        blendMode: "Average",
-        triggeredBy: { onControls: [ "dead" ] }
+        "code": "die",
+        "animation": "die",
+        "animationSpeed": 1.25,
+        "weight": 10,
+        "blendMode": "Average",
+        "triggeredBy": {
+          "onControls": [
+            "dead"
+          ]
+        }
       }
     ]
   },
@@ -68,41 +68,15 @@
     "behaviors": [
       {
         "code": "controlledphysics",
-        "stepHeight": 1.0
+        "stepHeight": 1
       },
       {
         "code": "floatupwhenstuck",
         "onlyWhenDead": true
       },
       {
-        code: "health",
-        currenthealth: 5,
-        maxhealth: 5
-      },
-      {
-        code: "harvestable",
-        drops: [
-          {
-            type: "item",
-            code: "redmeat-raw",
-            quantity: {
-              avg: 1.5,
-              var: 0.5
-            }
-          },
-          {
-            type: "item",
-            code: "hide-raw-small",
-            quantity: {
-              avg: 1,
-              var: 0.5
-            }
-          }
-        ]
-      },
-      {
-        code: "deaddecay",
-        hoursToDecay: 3
+        "code": "deaddecay",
+        "hoursToDecay": 0.5
       },
       {
         "code": "emotionstates",
@@ -152,14 +126,16 @@
             "minduration": 5667,
             "maxduration": 8667,
             "mincooldown": 6000,
-            "maxcooldown": 20000,
+            "maxcooldown": 20000
           },
           {
-            code: "petlookatentity",
-            priority: 1.5,
-            maxTurnAngleDeg: 360.0,
-            seekingRange: 3.0,
-            entityCodes: [ "player" ]
+            "code": "petlookatentity",
+            "priority": 1.5,
+            "maxTurnAngleDeg": 360,
+            "seekingRange": 3,
+            "entityCodes": [
+              "player"
+            ]
           },
           {
             "code": "lookaround",
