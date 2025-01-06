@@ -184,15 +184,15 @@
 				{
 					"name": "Layer1",
 					"from": [ -0.5, 0.0, -1.0 ],
-					"to": [ 8.0, 12.0, 14.0 ],
+					"to": [ 8.5, 12.0, 14.0 ],
 					"rotationOrigin": [ -0.5, 0.0, -1.0 ],
 					"faces": {
-						"north": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 8.5, 11.0 ] },
-						"east": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 15.0, 11.0 ] },
-						"south": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 8.5, 11.0 ] },
-						"west": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 15.0, 11.0 ] },
-						"up": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 8.5, 15.0 ] },
-						"down": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 8.5, 15.0 ] }
+						"north": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 9.0, 12.0 ] },
+						"east": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 15.0, 12.0 ] },
+						"south": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 9.0, 12.0 ] },
+						"west": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 15.0, 12.0 ] },
+						"up": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 9.0, 15.0 ] },
+						"down": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 9.0, 15.0 ] }
 					}
 				},
 				{
@@ -366,6 +366,90 @@
 					"frame": 119,
 					"elements": {
 						"Cube2": { "offsetX": 0.0, "offsetY": 0.0, "offsetZ": -14.0, "rotationX": 90.0, "rotationY": 0.0, "rotationZ": 0.0 }
+					}
+				}
+			]
+		},
+
+		{
+			"name": "Hug",
+			"code": "hug",
+			"quantityframes": 30,
+			"onActivityStopped": "EaseOut",
+			"onAnimationEnd": "Repeat",
+			"keyframes": [
+				{
+					"frame": 0,
+					"elements": {
+						"HandR": { "rotationX": 0.0, "rotationY": -45.0, "rotationZ": 0.0 },
+						"HandL": { "rotationX": 0.0, "rotationY": 45.0, "rotationZ": 0.0 }
+					}
+				},
+				{
+					"frame": 29,
+					"elements": {
+						"HandR": { "rotationX": 0.0, "rotationY": -45.0, "rotationZ": 0.0 },
+						"HandL": { "rotationX": 0.0, "rotationY": 45.0, "rotationZ": 0.0 }
+					}
+				}
+			]
+		},
+
+		{
+			"name": "Idle",
+			"code": "idle",
+			"quantityframes": 30,
+			"onActivityStopped": "EaseOut",
+			"onAnimationEnd": "Repeat",
+			"keyframes": [
+				{
+					"frame": 0,
+					"elements": {
+						"Cube2": { "offsetX": 0.0, "offsetY": 0.0, "offsetZ": 0.0 }
+					}
+				},
+				{
+					"frame": 29,
+					"elements": {
+						"Cube2": { "offsetX": 0.0, "offsetY": 0.0, "offsetZ": 0.0 }
+					}
+				}
+			]
+		},
+
+		{
+			"name": "Shakehand",
+			"code": "shakehand",
+			"quantityframes": 40,
+			"onActivityStopped": "Rewind",
+			"onAnimationEnd": "Repeat",
+			"keyframes": [
+				{
+					"frame": 0,
+					"elements": {
+						"HandR": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"HandL": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 }
+					}
+				},
+				{
+					"frame": 10,
+					"elements": {
+						"HandR": { "rotationX": 22.5, "rotationY": 0.0, "rotationZ": 0.0 },
+						"HandL": { "rotationX": 22.5, "rotationY": 0.0, "rotationZ": 0.0 }
+					}
+				},
+				{
+					"frame": 30,
+					"elements": {
+						"HandR": { "rotationX": -22.5, "rotationY": 0.0, "rotationZ": 0.0 },
+						"HandL": { "rotationX": -22.5, "rotationY": 0.0, "rotationZ": 0.0 }
+					}
+				},
+				{
+					"frame": 39,
+					"elements": {
+						"HandR": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"HandL": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 }
 					}
 				}
 			]

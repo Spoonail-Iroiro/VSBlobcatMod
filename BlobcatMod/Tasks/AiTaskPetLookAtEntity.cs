@@ -63,6 +63,9 @@ namespace BlobcatMod.Tasks {
         }
 
         public override bool ContinueExecute(float dt) {
+            if (entity.ServerPos.SquareDistanceTo(targetEntity.ServerPos) > seekingRange * seekingRange) {
+                return false;
+            }
             Vec3f targetVec = new Vec3f();
 
             targetVec.Set(
@@ -76,10 +79,12 @@ namespace BlobcatMod.Tasks {
             desiredYaw = GameMath.Clamp(desiredYaw, spawnAngleRad - maxTurnAngleRad, spawnAngleRad + maxTurnAngleRad);
 
             float yawDist = GameMath.AngleRadDistance(entity.ServerPos.Yaw, desiredYaw);
-            entity.ServerPos.Yaw += GameMath.Clamp(yawDist, -curTurnRadPerSec * dt, curTurnRadPerSec * dt);
-            entity.ServerPos.Yaw = entity.ServerPos.Yaw % GameMath.TWOPI;
+            if (Math.Abs(yawDist) > 0.01) {
+                entity.ServerPos.Yaw += GameMath.Clamp(yawDist, -curTurnRadPerSec * dt, curTurnRadPerSec * dt);
+                entity.ServerPos.Yaw = entity.ServerPos.Yaw % GameMath.TWOPI;
+            }
 
-            return Math.Abs(yawDist) > 0.01;
+            return true;
         }
 
 
