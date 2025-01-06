@@ -150,9 +150,9 @@
     ]
   },
   "sounds": {
-    "hurt": "game:creature/sheep/hurt",
-    "death": "game:creature/sheep/hurt",
-    "idle": "game:creature/sheep/idle"
+    "hurt": "creature/blobcat/meow2",
+    "death": "creature/blobcat/meow2",
+    "idle": "creature/blobcat/meow2"
   },
-  "idleSoundChance": 0.001
+  "idleSoundChance": 0.01
 }

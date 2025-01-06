@@ -1,0 +1,8 @@
+BlobcatMod/assets/blobcatmod/sounds/creature/blobcat/meow.ogg
+        https://freesound.org/people/DiegoAngelGaming/sounds/476484/
+        CC0
+
+BlobcatMod/assets/blobcatmod/sounds/creature/blobcat/meow2.ogg
+        Fiji-meow-02.wav by Chocktaw
+        https://freesound.org/s/220018/
+        CC BY 3.0
