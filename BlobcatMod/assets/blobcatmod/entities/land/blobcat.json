@@ -3,29 +3,21 @@
   "class": "EntityAgent",
   "hitboxSize": {
     "x": 1.0,
-    "y": 0.75
+    "y": 1.0
   },
   "deadHitboxSize": {
     "x": 0.75,
-    "y": 1.0
+    "y": 1
   },
   "eyeHeight": 0.6,
   "attributes": {
     "creatureDiet": {
-      "foodCategories": [
-        "Grain",
-        "Vegetable"
-      ],
-      "foodTags": [
-        "nibbleCrop",
-        "grass",
-        "fruitmash"
-      ],
-      "skipFoodTags": [
-        "rice",
-        "parsnip"
-      ]
-    }
+      "foodCategories": [],
+      "foodTags": [],
+      "skipFoodTags": []
+    },
+    "basketCatchable": true,
+    "basketCatchGeneration": 0
   },
   "weight": 150,
   "fallDamageMultiplier": 0.5,
@@ -40,11 +32,8 @@
     },
     "behaviors": [
       {
-        "code": "repulseagents"
-      },
-      {
         "code": "controlledphysics",
-        "stepHeight": 2.1251
+        "stepHeight": 1
       },
       {
         "code": "floatupwhenstuck",
@@ -52,30 +41,41 @@
       },
       {
         "code": "interpolateposition"
-      },
-      {
-        "code": "harvestable"
-      },
-      {
-        "code": "despawn",
-        "minPlayerDistance": 8,
-        "belowLightLevel": 8,
-        "minSeconds": 300
-      },
-      {
-        "code": "ropetieable",
-        "minGeneration": 2
       }
     ],
     "animations": [
       {
-        "code": "idle",
-        "animation": "walk",
-        "blendMode": "AddAverage",
-        "easeOutSpeed": 4,
+        code: "idle",
+        animation: "idle",
+        blendMode: "AddAverage",
+        easeOutSpeed: 4,
+        triggeredBy: { defaultAnim: true }
+      },
+      {
+        "code": "die",
+        "animation": "die",
+        "animationSpeed": 1.25,
+        "weight": 10,
+        "blendMode": "Average",
         "triggeredBy": {
-          "defaultAnim": true
+          "onControls": [
+            "dead"
+          ]
         }
+      },
+      {
+        code: "huge",
+        animation: "hug",
+        easeInSpeed: 4,
+        easeOutSpeed: 4,
+        blendMode: "Average"
+      },
+      {
+        code: "shakehand",
+        animation: "shakehand",
+        easeInSpeed: 4,
+        easeOutSpeed: 4,
+        blendMode: "Average"
       }
     ]
   },
@@ -88,78 +88,20 @@
     },
     "behaviors": [
       {
-        "code": "repulseagents"
-      },
-      {
         "code": "controlledphysics",
-        "stepHeight": 2.1251
-      },
-      {
-        "code": "despawn",
-        "minPlayerDistance": 8,
-        "belowLightLevel": 8,
-        "minSeconds": 300
-      },
-      {
-        "code": "health",
-        "currenthealth": 19,
-        "maxhealth": 19
+        "stepHeight": 1
       },
       {
         "code": "floatupwhenstuck",
         "onlyWhenDead": true
       },
       {
-        "code": "harvestable",
-        "drops": [
-          {
-            "type": "item",
-            "code": "redmeat-raw",
-            "quantity": {
-              "avg": 13,
-              "var": 3
-            }
-          }
-        ]
-      },
-      {
-        "code": "breathe"
+        "code": "deaddecay",
+        "hoursToDecay": 0.5
       },
       {
         "code": "emotionstates",
         "states": [
-          {
-            "code": "fleeondamage",
-            "duration": 60,
-            "chance": 0.85,
-            "slot": 0,
-            "priority": 5,
-            "accumType": "max",
-            "whenHealthRelBelow": 0.4
-          },
-          {
-            "code": "aggressiveondamage",
-            "duration": 30,
-            "chance": 0.95,
-            "slot": 0,
-            "priority": 2,
-            "accumType": "noaccum"
-          },
-          {
-            "code": "fleeondamage",
-            "duration": 30,
-            "chance": 1,
-            "slot": 0,
-            "priority": 1,
-            "accumType": "max"
-          },
-          {
-            "code": "alarmherdondamage",
-            "chance": 1,
-            "slot": 1,
-            "priority": 1,
-            "accumType": "max"
-          }
         ]
       },
       {
@@ -167,52 +109,69 @@
         "aiCreatureType": "LandCreature",
         "aitasks": [
           {
-            "code": "getoutofwater",
-            "priority": 1.4,
-            "movespeed": 0.02,
-            "animation": "walk",
-            "animationSpeed": 4
+            "code": "lookaround",
+            "priority": 1.3,
+            "priorityForCancel": 1.35,
+            "minduration": 3000,
+            "maxduration": 3000,
+            "mincooldown": 12000,
+            "maxcooldown": 16000
           },
           {
             "code": "idle",
             "priority": 1.3,
             "priorityForCancel": 1.35,
-            "minduration": 2667,
-            "maxduration": 2667,
-            "mincooldown": 6000,
-            "maxcooldown": 20000,
-            "animation": "walk",
-            "animationSpeed": 1.0
+            "minduration": 6000,
+            "maxduration": 7000,
+            "mincooldown": 14000,
+            "maxcooldown": 18000,
+            "animation": "walk"
           },
           {
-            "code": "wander",
-            "priority": 1,
-            "movespeed": 0.006,
-            "animationSpeed": 1.0,
-            "animation": "walk",
-            "preferredLightLevel": 24,
-            "priorityForCancel": 1.37
+            "code": "idle",
+            "priority": 1.3,
+            "priorityForCancel": 1.35,
+            "minduration": 4000,
+            "maxduration": 4000,
+            "mincooldown": 18000,
+            "maxcooldown": 22000,
+            "animation": "shakehand"
           },
           {
-            "code": "lookaround",
+            "code": "petlookatentity",
+            "priority": 1.6,
+            "maxTurnAngleDeg": 360,
+            "seekingRange": 1.8,
+            "entityCodes": [
+              "player"
+            ],
+            "animation": "huge"
+          },
+          {
+            "code": "petlookatentity",
+            "priority": 1.5,
+            "maxTurnAngleDeg": 360,
+            "seekingRange": 3,
+            "entityCodes": [
+              "player"
+            ]
+          },
+          {
+            "code": "idle",
             "priority": 0.5
           }
         ]
       },
       {
-        "code": "ropetieable",
-        "minGeneration": 2
-      },
-      {
         "code": "pettable",
-        "minGeneration": 1
+        "minGeneration": 0
       }
     ]
   },
   "sounds": {
-    "hurt": "game:creature/sheep/hurt",
-    "death": "game:creature/sheep/hurt",
-    "idle": "game:creature/sheep/idle"
+    "hurt": "creature/blobcat/meow2",
+    "death": "creature/blobcat/meow2",
+    "idle": "creature/blobcat/meow2"
   },
-  "idleSoundChance": 0.001
+  "idleSoundChance": 0.01
 }
