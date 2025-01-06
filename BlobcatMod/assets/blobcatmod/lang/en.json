@@ -1,3 +1,5 @@
 {
-    "hello": "hello world!"
+  "item-creature-blobcat": "Blobcat",
+  "item-spawnegg-blobcat": "Blobcat egg",
+  "item-creature-blobcatmod:blobcat": "Blobcat"
 }
