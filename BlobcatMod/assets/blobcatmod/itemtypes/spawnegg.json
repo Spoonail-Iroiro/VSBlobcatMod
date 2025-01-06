@@ -1,5 +1,5 @@
 {
-  "code": "creature",
+  "code": "spawnegg",
   "class": "ItemCreature",
   "maxstacksize": 64,
   "variantgroups": [
@@ -19,6 +19,17 @@
     "*": {
       "base": "entity/land/blobcat"
     }
+  },
+  "creativeinventory": {
+    "general": [
+      "*"
+    ],
+    "items": [
+      "*"
+    ],
+    "creatures": [
+      "*"
+    ]
   },
   "materialDensity": 600,
   guiTransform: {

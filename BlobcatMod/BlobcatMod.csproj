@@ -68,6 +68,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="assets\blobcatmod\sounds\creature\blobcat\" />
     <Folder Include="assets\blobcatmod\textures\" />
   </ItemGroup>
 
