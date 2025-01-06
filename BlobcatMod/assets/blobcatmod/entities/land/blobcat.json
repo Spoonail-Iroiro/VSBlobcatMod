@@ -123,8 +123,8 @@
             "priorityForCancel": 1.35,
             "minduration": 6000,
             "maxduration": 7000,
-            "mincooldown": 8000,
-            "maxcooldown": 14000,
+            "mincooldown": 14000,
+            "maxcooldown": 18000,
             "animation": "walk"
           },
           {
@@ -133,8 +133,8 @@
             "priorityForCancel": 1.35,
             "minduration": 4000,
             "maxduration": 4000,
-            "mincooldown": 1000,
-            "maxcooldown": 18000,
+            "mincooldown": 18000,
+            "maxcooldown": 22000,
             "animation": "shakehand"
           },
           {
