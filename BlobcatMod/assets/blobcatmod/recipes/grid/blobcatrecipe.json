@@ -11,7 +11,28 @@
       "H": {
         "type": "item",
         "code": "game:hide-raw-small",
-        "quantity": 4
+        "quantity": 4,
+      }
+    },
+    "output": {
+      "type": "item",
+      "code": "blobcatmod:spawnegg-blobcat",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "SSS,SHS,SSS",
+    "width": 3,
+    "height": 3,
+    "ingredients": {
+      "S": {
+        "type": "item",
+        "code": "game:stone-*"
+      },
+      "H": {
+        "type": "item",
+        "code": "game:hide-raw-medium",
+        "quantity": 2,
       }
     },
     "output": {
