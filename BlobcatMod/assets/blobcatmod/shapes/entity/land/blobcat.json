@@ -311,6 +311,13 @@
 						"down": { "texture": "#blobcattexture", "uv": [ 0.0, 0.0, 8.5, 13.0 ] }
 					}
 				}
+			],
+			"attachmentpoints": [
+				{
+					"code": "Center",
+					"posX": "3.5","posY": "5.0","posZ": "6.5",
+					"rotationX": "0.0","rotationY": "0.0","rotationZ": "0.0"
+				}
 			]
 		}
 	],
