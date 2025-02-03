@@ -6,7 +6,7 @@
     {
       "code": "type",
       "states": [
-        "blobcat"
+        "blobcat-normal-na-adult"
       ]
     }
   ],
@@ -32,24 +32,12 @@
     ]
   },
   "materialDensity": 600,
-  guiTransform: {
-    translation: {
-      x: 0,
-      y: 0,
-      z: 0
-    },
-    rotation: {
-      x: -22,
-      y: -24,
-      z: -180
-    },
-    origin: {
-      x: 0.57,
-      y: 0.32,
-      z: 0.5
-    },
-    scale: 1.65
-  },
+	guiTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: -22, y: -24, z: -180 },
+		origin: { x: 0.76, y: 0.08, z: 0 },
+		scale: 1.82
+	},
   tpHandTransform: {
     translation: {
       x: -0.2,

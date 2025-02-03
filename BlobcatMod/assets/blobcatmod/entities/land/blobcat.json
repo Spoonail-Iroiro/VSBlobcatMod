@@ -1,6 +1,11 @@
 {
   "code": "blobcat",
   "class": "EntityAgent",
+	variantgroups: [
+		{ code: "type", "states": ["normal"] },
+		{ code: "gender", "states": ["na"] },
+		{ code: "age", "states": ["adult"] }
+	],
   "hitboxSize": {
     "x": 1.0,
     "y": 1.0
