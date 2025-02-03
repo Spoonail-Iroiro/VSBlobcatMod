@@ -16,7 +16,7 @@
     },
     "output": {
       "type": "item",
-      "code": "blobcatmod:spawnegg-blobcat",
+      "code": "blobcatmod:spawnegg-blobcat-normal-na-adult",
       "quantity": 1
     }
   },
@@ -37,7 +37,7 @@
     },
     "output": {
       "type": "item",
-      "code": "blobcatmod:spawnegg-blobcat",
+      "code": "blobcatmod:spawnegg-blobcat-normal-na-adult",
       "quantity": 1
     }
   }
