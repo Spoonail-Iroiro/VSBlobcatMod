@@ -1,11 +1,11 @@
 {
   "type": "code",
   "modid": "blobcatmod",
-  "name": "Blobcat",
+  "name": "Simple Blobcat",
   "authors": [
     "Spoonail"
   ],
-  "description": "Adds simple companion Blobcats",
+  "description": "Adds simple companion Blobcat",
   "version": "0.1.1",
   "dependencies": {
     "game": ""
