@@ -22,13 +22,7 @@ namespace BlobcatMod.Tasks {
         float maxTurnAngleRad;
         float spawnAngleRad;
 
-        public AiTaskPetLookAtEntity(EntityAgent entity) : base(entity) {
-
-        }
-
-        public override void LoadConfig(JsonObject taskConfig, JsonObject aiConfig) {
-            base.LoadConfig(taskConfig, aiConfig);
-
+        public AiTaskPetLookAtEntity(EntityAgent entity, JsonObject taskConfig, JsonObject aiConfig) : base(entity, taskConfig, aiConfig) {
             maxTurnAngleRad = taskConfig["maxTurnAngleDeg"].AsFloat(360) * GameMath.DEG2RAD;
             spawnAngleRad = entity.Attributes.GetFloat("spawnAngleRad");
             seekingRange = taskConfig["seekingRange"].AsFloat(25.0f);
@@ -63,6 +57,8 @@ namespace BlobcatMod.Tasks {
         }
 
         public override bool ContinueExecute(float dt) {
+            if (!IsInValidDayTimeHours(false)) return false;
+
             if (entity.ServerPos.SquareDistanceTo(targetEntity.ServerPos) > seekingRange * seekingRange) {
                 return false;
             }
