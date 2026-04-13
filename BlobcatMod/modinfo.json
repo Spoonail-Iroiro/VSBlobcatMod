@@ -2,12 +2,10 @@
   "type": "code",
   "modid": "blobcatmod",
   "name": "Simple Blobcat",
-  "authors": [
-    "Spoonail"
-  ],
-  "description": "Adds simple companion Blobcat",
-  "version": "0.2.0",
+  "authors": ["Mononospace"],
+  "description": "Adds a simple companion Blobcat",
+  "version": "0.3.0-rc.1",
   "dependencies": {
-    "game": "1.21.0-rc.1"
+    "game": "1.22.0-rc.1"
   }
 }
