@@ -2,6 +2,7 @@
   "item-creature-blobcat-*": "Blobcat",
   "item-spawnegg-blobcat-*": "Blobcat egg",
   "item-creature-blobcatmod:blobcat-normal-na-adult": "Blobcat",
+  "item-dead-creature-blobcat-normal-na-adult": "Dead Blobcat"
   //"blobcatmod:item-handbooktitle-blobcatmod:spawnegg-blobcat": "Title",
   //"blobcatmod:item-handbooktext-blobcatmod:spawnegg-blobcat": "itemdesc",
 }
