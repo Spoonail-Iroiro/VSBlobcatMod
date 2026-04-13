@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <OutputPath>bin\$(Configuration)\Mods\mod</OutputPath>
   </PropertyGroup>
@@ -67,10 +67,6 @@
     </AssemblyAttribute>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="assets\blobcatmod\sounds\creature\blobcat\" />
-    <Folder Include="assets\blobcatmod\textures\" />
-  </ItemGroup>
 
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
     <Exec Command="if not exist &quot;Properties/launchSettings.json&quot; (&#xA;    echo Creating launchsettings.json from template...&#xD;&#xA;    copy &quot;Properties\launchSettings.template.json&quot; &quot;Properties\launchSettings.json&quot;&#xA;) else (&#xA;    echo launchsettings.json already exists. Skipping.&#xA;)" />
